@@ -43,3 +43,12 @@ Disciplined in coding
 - go to debug panel and click `create a launch.json file`
 - instantiate launch.json and add this underneath program `"preLaunchTask": "tsc: build - tsconfig.json",` 
 - then start debugging 
+
+
+# typescript have more datatype than the old ones like : String, Number. boolen, null, undefined. object 
+they are : 
+- any  - Any can represent any type of values, basically this is an approach on how we can dynamically program in TS
+- unknown 
+- never
+- enum 
+- tuple - tuples are only usefull with key/value pairs. Limit it to 2 
