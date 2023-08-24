@@ -20,3 +20,8 @@ Dynamic Means that variablles are noticed at runtime , and can change soo there 
 Compilations -- we have to give our TS file to compiler , we call this Transpilation  
 Disciplined in coding 
 
+
+# Get Typescript version 
+`tsc -v` in cmd 
+# compile ts 
+`index.ts 'File'` in cmd to compile it to js
