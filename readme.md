@@ -25,3 +25,21 @@ Disciplined in coding
 `tsc -v` in cmd 
 # compile ts 
 `index.ts 'File'` in cmd to compile it to js
+
+
+# ts Config  `tsc --init`
+
+- target 
+- module 
+- rootDir 
+- outDir 
+- removeComments 
+- noEmitOnError
+- sourceMap
+
+
+# Debugging 
+- add a breakpoint 
+- go to debug panel and click `create a launch.json file`
+- instantiate launch.json and add this underneath program `"preLaunchTask": "tsc: build - tsconfig.json",` 
+- then start debugging 
