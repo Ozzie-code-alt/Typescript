@@ -109,4 +109,63 @@ kgToLbs(90)
 kgToLbs('90')
 
 
-// intersection types
+// intersection types basically parang inheritance ot object prototyping 
+
+type Draggrable = {
+    drag :() => void
+}
+
+type Resizable = {
+    resize : () => void
+}
+
+
+type UIWidget = Draggrable & Resizable
+
+let textBox: UIWidget = {
+    drag:()=> {},
+    resize:()=>{}
+}
+
+
+//Literal Types == we limit the amount of variables 
+// Literal(excat, specific)
+type Quantity = 50 | 100
+let quantity :  Quantity =100;
+
+type Metric  = 'cm' |  'inch' // another way of using it 
+
+
+// Nullable types -- in out ts config set stricknullchecks to false as TS is very strict with null values
+
+function greet(name:string | null){ // use union here to add null 
+    if(name)
+    console.log(name.toLowerCase())
+    else
+        console.log('Hole')
+}
+
+greet(null)
+
+
+//Optional Changing 
+type Customer = {
+    birthday : Date
+}
+
+function getCustomer(id:number) : Customer | null | undefined {// checking if return value returns null or undefined using union 
+    return id=== 0 ? null :{birthday: new Date()}
+}
+
+let customer = getCustomer(1)
+
+// if(customer !== null && customer !== undefined) we can change this and use the optional property access operator 
+
+    console.log(customer?.birthday?.getFullYear()) // the questionMark here is the optional property access operator
+
+    // optional element access operator  -- this is for arrays basically same approach "?."
+
+    // optional call operator
+    let log: any = null;
+    log?.('a') // if we call this and run some value it will cause an error since log is null. what we can use here is the optional call operator where
+    // this pirce of code will get executed if log is referencing an actual function otherwise undefined
