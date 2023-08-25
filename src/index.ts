@@ -59,3 +59,16 @@ function calculateTax(income: number, taxYear? : number) :number { // we have th
 }
 
 calculateTax(10_000, 2025) // in js we can pass more arguments in out function, basically typescript fixes this , what we passed here will overwrite the value of taxYear
+
+
+//Objects in TS 
+
+let employee: { // this is how we annotate in objects
+    readonly id:number, // we can add readonly here to avoid mutations
+    name ?:string // we can use the optional feature 
+    retire : (date: Date )=> void // this is how we instantiate methods in objects here in TS
+
+} = {id: 1, name: '' , retire:(date: Date) =>{
+    console.log(date) // this just logs our date 
+}};
+// employee.name= 'Justin' this is how we access it 
