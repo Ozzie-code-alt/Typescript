@@ -35,3 +35,27 @@ let user : [number, string] = [1, 'justin'] // we first annotate the data type t
 // user. // we can do this to check all methods
 
 console.log(user[0])
+
+
+// Enums 
+// const small = 1 
+// const medium = 2 
+// const large = 3 instead of this we can use enums such as
+
+
+enum Size {small =1,medium = 8,large =5} //add const to make it more optimized  try and check index.js
+let mySize: Size = Size.large
+
+console.log(mySize)
+
+
+//functions 
+// it is best practice to always annotate out parameters and return funciton. we declare it to avoid return any other data type than the set one 
+function calculateTax(income: number, taxYear? : number) :number { // we have this error because js always return an undefined in our funciton, we use ? to make an argument optional or put a default value to make it optional
+    if ((taxYear|| 2022)< 50_000){
+        return income & 1.2
+    }
+    return income * 1.3
+}
+
+calculateTax(10_000, 2025) // in js we can pass more arguments in out function, basically typescript fixes this , what we passed here will overwrite the value of taxYear

@@ -50,5 +50,5 @@ they are :
 - any  - Any can represent any type of values, basically this is an approach on how we can dynamically program in TS
 - unknown 
 - never
-- enum 
+- enum -
 - tuple - tuples are only usefull with key/value pairs. Limit it to 2 
