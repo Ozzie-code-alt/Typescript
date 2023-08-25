@@ -52,3 +52,9 @@ they are :
 - never
 - enum -
 - tuple - tuples are only usefull with key/value pairs. Limit it to 2 
+
+
+# Advanced Types 
+- Nullable
+- Unkknown type
+- never type  

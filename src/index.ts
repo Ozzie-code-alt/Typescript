@@ -72,3 +72,41 @@ let employee: { // this is how we annotate in objects
     console.log(date) // this just logs our date 
 }};
 // employee.name= 'Justin' this is how we access it 
+
+
+
+
+
+// with TYPE ALISAS we can do it like object constructor in vanilla js 
+
+type Employee = { // basically this is like a constructor 
+    readonly id:number, // we can add readonly here to avoid mutations
+    name ?:string // we can use the optional feature 
+    retire : (date: Date )=> void // this is how we instantiate methods in objects here in TS
+}
+
+let employees: Employee = { // this is how we annotate in objects  , and this is how we Anotate our Employee Object 
+ id: 1, 
+ name: '' , 
+ retire:(date: Date) =>{ // method
+    console.log(date) // this just logs our date 
+}};
+
+
+
+//Union Type 
+
+function kgToLbs(weight: number | string): number{
+// Narrowing 
+if(typeof weight === 'number')
+    return weight * 2.2
+else{
+    return parseInt(weight) * 2.2
+}
+}
+
+kgToLbs(90)
+kgToLbs('90')
+
+
+// intersection types
