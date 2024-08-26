@@ -169,3 +169,19 @@ let customer = getCustomer(1)
     let log: any = null;
     log?.('a') // if we call this and run some value it will cause an error since log is null. what we can use here is the optional call operator where
     // this pirce of code will get executed if log is referencing an actual function otherwise undefined
+
+
+//This is Type Generics, basically whats happening here is that typescript is smart enought to know the types of variables in an object
+type APIProps<Data> = {
+    data: Data
+}
+
+const response:APIProps<{name:string, age:number}> = {
+    data: {
+        name:"dhbasuid",
+        age:23
+    }
+}
+
+
+// Learn Extends 
